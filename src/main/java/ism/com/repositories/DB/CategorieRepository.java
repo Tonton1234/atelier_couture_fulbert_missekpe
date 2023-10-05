@@ -19,6 +19,11 @@ public class CategorieRepository implements ITables<Categorie> {
 
     @Override
     public ArrayList<Categorie> findAll() {
+        try {
+            Class.forName(className:"com.mysql.cj.jdbc.driver");
+        }catch (classNotFoundException e ){
+            System.out.println("Erreur de chargement du driver");
+        }
         return null;
     }
 
